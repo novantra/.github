@@ -1,0 +1,43 @@
+name: Docs feedback
+description: Report something wrong, missing, or unclear in the documentation at docs.novantra.io.
+title: "[Docs]: "
+labels: ["docs", "needs-triage"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page URL
+      description: The exact URL of the docs page this is about.
+      placeholder: https://docs.novantra.io/en/guides/...
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue
+    attributes:
+      label: What is wrong, missing, or unclear?
+      description: Quote the relevant passage if helpful.
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested fix
+      description: Optional. If you have a specific rewording or addition in mind, propose it here.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of issue
+      options:
+        - Factually wrong
+        - Outdated
+        - Confusing or unclear
+        - Missing content
+        - Broken link
+        - Typo or formatting
+    validations:
+      required: true
