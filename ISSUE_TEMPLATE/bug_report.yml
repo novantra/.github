@@ -1,0 +1,86 @@
+name: Bug report
+description: Report something that is broken or behaving incorrectly.
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Please fill in the fields below so we can reproduce and triage quickly.
+        For security vulnerabilities, **do not use this form**. Use the [private vulnerability reporting flow](https://github.com/novantra/community/security/advisories/new) instead.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of the unexpected behaviour.
+      placeholder: When I clicked X, I expected Y but got Z.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The exact steps to reproduce the issue.
+      placeholder: |
+        1. Go to ...
+        2. Click on ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+      description: What did you expect to happen instead?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: deployment
+    attributes:
+      label: Deployment
+      description: Are you using Novantra Cloud or a Sovereign on-premise install?
+      options:
+        - Cloud
+        - Sovereign (on-premise)
+        - Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The Novantra version shown in the workspace footer or About page.
+      placeholder: e.g. 0.42.1
+    validations:
+      required: false
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and OS (if applicable)
+      placeholder: e.g. Chrome 132 on macOS 15.2
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or logs
+      description: Drag and drop screenshots or paste relevant log output. **Do not paste credentials, customer data, or audit content.**
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched existing Issues and did not find a duplicate.
+          required: true
+        - label: I have removed sensitive data from screenshots and logs.
+          required: true
