@@ -1,0 +1,62 @@
+name: Feature request
+description: Suggest a new capability or an improvement to an existing one.
+title: "[Feature]: "
+labels: ["feature-request", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to suggest a feature. Please tell us about the **problem** you are trying to solve, not just the solution you have in mind. That helps us evaluate whether we should solve it the way you suggest or differently.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What are you trying to accomplish? What is getting in the way today?
+      placeholder: When I try to ..., I cannot ... because ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: who
+    attributes:
+      label: Who is affected
+      description: Which roles, deployments, or scenarios are impacted? (e.g. workspace admins, integrators, on-premise operators)
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: If you have a specific idea, describe it. Optional.
+    validations:
+      required: false
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Current workaround
+      description: What are you doing today to work around this? Helps us understand how blocking the gap is.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: deployment
+    attributes:
+      label: Relevant deployment
+      options:
+        - Cloud
+        - Sovereign (on-premise)
+        - Both
+        - Not sure
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched existing Issues and Discussions and did not find this request.
+          required: true
