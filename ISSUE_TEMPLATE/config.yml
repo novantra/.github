@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://docs.novantra.io
+    about: User and integrator documentation. Check here before filing an Issue.
+  - name: Community Discussions
+    url: https://github.com/novantra/community/discussions
+    about: Open-ended questions, ideas, or product feedback that is not a bug or specific feature request.
+  - name: Security vulnerability
+    url: https://github.com/novantra/community/security/advisories/new
+    about: Report a security issue privately. Do NOT file a public Issue for security.
+  - name: Sales and enterprise enquiries
+    url: mailto:hello@novantra.io
+    about: For commercial questions, partnerships, or enterprise plans.
